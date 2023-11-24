@@ -5,12 +5,29 @@ using UnityEngine;
 public class SpawnOnDisEn : MonoBehaviour
 {
     public GameObject PrefabCube;
-    public GameObject cube;
+    public List<GameObject> listCube;
+    public int numCubes;
+
+    private void CreateCube(string method)
+    {
+        GameObject CubeOnDisEn = Instantiate<GameObject>(PrefabCube);
+        CubeOnDisEn.name = "CubeOn" + method + numCubes++;
+        Color color = new Color(Random.value, Random.value, Random.value);
+        CubeOnDisEn.GetComponent<MeshRenderer>().material.color = color;
+        Vector3 position = new Vector3();
+        position.x = 5;
+        position.y = 5;
+        position.z = -5;
+        CubeOnDisEn.transform.position = position;
+
+        listCube.Add(CubeOnDisEn);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        listCube = new List<GameObject>();
+        numCubes = 0;
     }
 
     // Update is called once per frame
@@ -21,27 +38,11 @@ public class SpawnOnDisEn : MonoBehaviour
 
     private void OnEnable()
     {
-        cube = Instantiate<GameObject>(PrefabCube);
-        cube.name = "Cube On Enable";
-        Color color = new Color(255, 255, 255);
-        cube.GetComponent<MeshRenderer>().material.color = color;
-        Vector3 pos;
-        pos.x = 22;
-        pos.y = 1;
-        pos.z = -1;
-        cube.transform.position = pos;
+        CreateCube("Enable");
     }
 
     private void OnDisable()
     {
-        cube = Instantiate<GameObject>(PrefabCube);
-        cube.name = "Cube On Disable";
-        Color color = new Color(120, 120, 120);
-        cube.GetComponent<MeshRenderer>().material.color = color;
-        Vector3 pos;
-        pos.x = 22;
-        pos.y = 1;
-        pos.z = -1;
-        cube.transform.position = pos;
+        CreateCube("Disable");
     }
 }

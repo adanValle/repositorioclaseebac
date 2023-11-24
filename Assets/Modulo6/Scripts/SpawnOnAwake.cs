@@ -8,15 +8,15 @@ public class SpawnOnAwake : MonoBehaviour
 
     private void Awake()
     {
-        GameObject cube = Instantiate<GameObject>(PrefabCube);
-        cube.name = "Modulo6_Cube";
+        GameObject CubeOnAwake = Instantiate<GameObject>(PrefabCube);
+        CubeOnAwake.name = "CubeOnAwake";
         Color color = new Color(Random.value, Random.value, Random.value);
-        cube.GetComponent<MeshRenderer>().material.color = color;
-        Vector3 pos;
-        pos.x = 14;
-        pos.y = 1;
-        pos.z = 4;
-        cube.transform.position = pos;
+        CubeOnAwake.GetComponent<MeshRenderer>().material.color = color;
+        Vector3 position = new Vector3();
+        position.x = -5;
+        position.y = 1;
+        position.z = -5;
+        CubeOnAwake.transform.position = position;
     }
 
     // Start is called before the first frame update
