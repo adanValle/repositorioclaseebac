@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 3586845879303643301}
   - component: {fileID: 2370532959550436967}
   - component: {fileID: 5755594172066404785}
-  - component: {fileID: 4766015354526230634}
-  - component: {fileID: -249548428315315154}
   - component: {fileID: -6237019651000384534}
+  - component: {fileID: -1788188845182150154}
   m_Layer: 0
   m_Name: GameObject3
   m_TagString: Untagged
@@ -100,32 +99,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4766015354526230634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628506682146357158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e80207dc774cc94dae79642cd021c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-249548428315315154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628506682146357158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61956a7532e903d44abcc65077bd6a4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PrefabCube: {fileID: 0}
-  numCubes: 0
 --- !u!54 &-6237019651000384534
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,3 +115,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1788188845182150154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628506682146357158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e80207dc774cc94dae79642cd021c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  var: 0
